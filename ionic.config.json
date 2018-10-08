@@ -1,0 +1,7 @@
+{
+  "name": "Appzobi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
