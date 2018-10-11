@@ -1,0 +1,47 @@
+<!--
+  Generated template for the FormModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Ajouter un post</ion-title>
+        <ion-buttons end (click)="closeModal()">
+            <button ion-button icon-only>
+                <ion-icon name="close"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-card (click)="shootPhoto()">
+            <img src="{{ img }}">
+            <div class="not-img">
+                <p>
+                    <ion-icon name="camera"></ion-icon>
+                    Votre image
+                </p>
+            </div>
+        </ion-card>
+
+        <ion-item>
+            <ion-label fixed>Title</ion-label>
+            <ion-input type="text" value="" name="name" [(ngModel)]="user.username" placeholder="New title"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Description</ion-label>
+            <ion-textarea name="textarea" [(ngModel)]="user.textarea" placeholder="New desc"></ion-textarea>
+        </ion-item>
+
+        <button ion-button margin-top full (click)="registerPost()">Envoyer</button>
+
+    </ion-list>
+</ion-content>
